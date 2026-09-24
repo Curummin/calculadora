@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EBE6DB;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    padding: 24px;
+}
+
+.calculadora {
+    width: 100%;
+    max-width: 320px;
+    background: #262B22;
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 0 20px 40px -12px rgba(38, 43, 34, 0.45);
+}
+
+.visor {
+    background: #D7E0C4;
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-bottom: 18px;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    text-align: right;
+    box-shadow: inset 0 3px 8px rgba(47, 58, 38, 0.25);
+}
+
+.visor-anterior {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    color: #55624A;
+    min-height: 18px;
+    word-break: break-all;
+}
+
+.visor-atual {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #2F3A26;
+    word-break: break-all;
+    line-height: 1.1;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tecla {
+    border: none;
+    border-radius: 16px;
+    aspect-ratio: 1;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #F5F0E6;
+    color: #262B22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.tecla:hover {
+    filter: brightness(1.06);
+}
+
+.tecla:active {
+    transform: scale(0.93);
+}
+
+.tecla:focus-visible {
+    outline: 3px solid #E0A83E;
+    outline-offset: 2px;
+}
+
+.tecla-limpar {
+    background: #B5432F;
+    color: #F5F0E6;
+}
+
+.tecla-utilidade {
+    background: #3D4434;
+    color: #F5F0E6;
+    font-size: 1.05rem;
+}
+
+.tecla-operador {
+    background: #E0A83E;
+    color: #262B22;
+}
+
+.tecla-igual {
+    background: #D7E0C4;
+    color: #2F3A26;
+}
+
+.tecla-zero {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    justify-content: flex-start;
+    padding-left: 26px;
+}
+
+@media (max-width: 360px) {
+    .visor-atual {
+        font-size: 2rem;
+    }
+    .tecla {
+        font-size: 1.1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tecla {
+        transition: none;
+    }
+}
