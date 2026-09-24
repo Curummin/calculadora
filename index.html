@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="calculadora">
+    <div class="visor">
+        <div class="visor-anterior" id="visorAnterior"></div>
+        <div class="visor-atual" id="visorAtual">0</div>
+    </div>
+
+    <div class="teclado">
+        <button class="tecla tecla-limpar" data-acao="limpar">AC</button>
+        <button class="tecla tecla-utilidade" data-acao="apagar">⌫</button>
+        <button class="tecla tecla-utilidade" data-acao="porcentagem">%</button>
+        <button class="tecla tecla-operador" data-acao="dividir">÷</button>
+
+        <button class="tecla" data-numero="7">7</button>
+        <button class="tecla" data-numero="8">8</button>
+        <button class="tecla" data-numero="9">9</button>
+        <button class="tecla tecla-operador" data-acao="multiplicar">×</button>
+
+        <button class="tecla" data-numero="4">4</button>
+        <button class="tecla" data-numero="5">5</button>
+        <button class="tecla" data-numero="6">6</button>
+        <button class="tecla tecla-operador" data-acao="subtrair">−</button>
+
+        <button class="tecla" data-numero="1">1</button>
+        <button class="tecla" data-numero="2">2</button>
+        <button class="tecla" data-numero="3">3</button>
+        <button class="tecla tecla-operador" data-acao="somar">+</button>
+
+        <button class="tecla tecla-zero" data-numero="0">0</button>
+        <button class="tecla" data-numero=".">.</button>
+        <button class="tecla tecla-igual" data-acao="igual">=</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
